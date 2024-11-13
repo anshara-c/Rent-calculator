@@ -16,7 +16,7 @@
                 <a href="index.html" class="logo">
                     <i class="bx bx-home"></i>R State
                 </a>
-                <input type="checkbox" name="" id="menu">
+                <!--<input type="checkbox" name="" id="menu">-->
                 <label for="menu"><i class='bx bx-menu' id="menu-icon"></i></label>
                 <!-- Nav List --> 
                  <ul class="navbar">
@@ -25,7 +25,7 @@
                     <li><a href="#sales">Sales</a></li>
                     <li><a class="no" href="#properties">Properties</a></li>
                  </ul>
-                 <a href="#" class="btn">Log In</a>
+                 <a href="login.html" class="btn">Log In</a>
             </div>
         </header>
 
@@ -33,7 +33,7 @@
         <section class="home container" id="home">
             <div class="home-text">
                 <h1>Find your next <br> Perfect Place to <br>Live.</h1>
-                <a href="#" class="btn">Sign up</a>
+                <a href="sign-up.html" class="btn">Sign up</a>
             </div>
 
         </section>
@@ -48,7 +48,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nam aliquid voluptate harum quas pariatur aspernatur praesentium quidem porro tempore!</p>
                 <p>Lorur adipisicing elit. Perspiciatis reiciendis numquam placeat dolorum inventore mollitia non quibusdam aperiam nihil suscipit!</p>
                 <p>adipisicintium quis aspernatur expedita?</p>
-                <a href="#" class="btn">Learn More</a>
+                <button id="myBtn" class="btn">See more</button>
             </div>
         </section>
 
@@ -172,9 +172,40 @@
                 <input type="submit" values="Send" class="btn">
             </form>
         </section>
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Welcome to our Dhaka price predictor</h2>
+              </div>
+              <div class="heading">
+                Want to predict the price of a new house in dhaka? Fill the information below:
+              </div>
+              <form class="form-inline" action="#">
+                <label for="email">Enter the location:</label>
+                <select name="location" id="location" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Gulshan">Gulshan</option>
+                    <option value="Mohammadpur">Mohammadpur</option>
+                    <option value="Bashundhara-R/A">Bashundhara R/A</option>
+                    <option value="Uttara">Uttara</option>
+                </select>
+                <label for="pwd">Enter the BHK:</label>
+                <input type="text" placeholder="Enter BHK">
+                <label for="email">Enter no. of bathrooms:</label>
+                <input type="text" placeholder="Enter total number of bathrooms">
+                <label for="pwd">Enter total sqf:</label>
+                    <input type="text" placeholder="Enter total square feet">
+                <button class="form-btn" type="submit">Submit</button>
+              </form>
+            </div>
+          
+          </div>
         <!--Footer-->
         <section class="footer">
-            <div class="footer-container container">
+            <div class="footer-container">
                 <h2>R. State</h2>
                 <div class="footer-box">
                     <h3>Quick Links</h3>
@@ -200,6 +231,36 @@
                 </div>               
             </div>
         </section>
-
+        <div class="copyright">
+            <p>&#169 Nafiz E Zaman All rights reserved</p>
+        </div>
+        <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+            
+            // Get the button that opens the modal
+            var btn = document.getElementById("myBtn");
+            
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            
+            // When the user clicks the button, open the modal 
+            btn.onclick = function() {
+              modal.style.display = "block";
+            }
+            
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+            }
+            
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+        </script>
     </body>
+    
 </html>
